@@ -2,6 +2,11 @@ h1{
   background-color: skyblue;
   box-shadow: 3px 3px 4px gray;
 }
+.newuserbtn:hover {
+  background-color: rgb(36, 70, 114);
+  color: white;
+  cursor: pointer;
+}
 .App {
   text-align: center;
 }

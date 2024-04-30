@@ -17,28 +17,29 @@ function App() {
     { id: 10, first_name: "Stephi", last_name: "Kember", email: "skember9@unc.edu", gender: "Female", fee_balance: 748 }
   ];
   console.log(App);
-// The current state of the data has been initialized using the list of people
+  // The current state of the data has been initialized using the list of people
   const [data, setData] = useState(initialData);
-//Created a function to delete a person according to their respective id
+  //Created a function to delete a person according to their respective id
   const deletePerson = (id) => {
     setData(data.filter(person => person.id !== id));
   };
-// Created a function to add a person to the list of people 
+  // Created a function to add a person to the list of people 
   const addPerson = (newPerson) => {
     //Details for the new person passed to the function and an id introduced
     setData([...data, { ...newPerson, id: data.length + 1 }]);
   };
-//Created a function to update details of people on the list using the id and other details
+  //Created a function to update details of people on the list using the id and other details
   const updatePerson = (id, updatedInfo) => {
     setData(data.map(person => person.id === id ? { ...person, ...updatedInfo } : person));
   };
-//Rendered to see the outcome on the user interface
+  //Rendered to see the outcome on the user interface
   return (
     <div className="App">
       <h1>User List</h1>
       <List data={data} deletePerson={deletePerson} updatePerson={updatePerson} />
-      <button onClick={() => addPerson({ first_name: "New", last_name: "User", email: "newuser@gmail.com", gender: "Male/Female/...", fee_balance: 2000 })}>
-         New User
+      <button className="newuserbtn"
+        onClick={() => addPerson({ first_name: "New", last_name: "User", email: "newuser@gmail.com", gender: "Male/Female/...", fee_balance: 2000 })}>
+        New User
       </button>
     </div>
   );

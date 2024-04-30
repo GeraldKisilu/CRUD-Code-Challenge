@@ -1,14 +1,14 @@
-// import React from 'react';
-// import Item from './Item';
+import React from 'react';
+import Item from './Item';
 
-// const List = ({ data, updateItem, deleteItem }) => {
-//   return (
-//     <div>
-//       {data.map(item => (
-//         <Item key={item.id} item={item} updateItem={updateItem} deleteItem={deleteItem} />
-//       ))}
-//     </div>
-//   );
-// };
+function List({ data, deletePerson, updatePerson }) {
+  return (
+    <div>
+      {data.map(person => (
+        <Item key={person.id} person={person} deletePerson={deletePerson} updatePerson={updatePerson} />
+      ))}
+    </div>
+  );
+}
 
-// export default List;
+export default List;

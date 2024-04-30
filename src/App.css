@@ -1,6 +1,8 @@
 h1{
   background-color: skyblue;
   box-shadow: 3px 3px 4px gray;
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
 }
 .button:hover {
   background-color: rgb(36, 70, 114);

@@ -1,4 +1,5 @@
 import React from 'react';
+import './List.css'
 import Item from './Item';
 
 function List({ data, deletePerson, updatePerson }) {

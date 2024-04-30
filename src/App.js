@@ -15,17 +15,17 @@ function App() {
       });
   }, []);
 
-  // const deletePerson = (id) => {
-  //   setData(data.filter(person => person.id !== id));
-  // };
+  const deletePerson = (id) => {
+    setData(data.filter(person => person.id !== id));
+  };
 
-  // const addPerson = (newPerson) => {
-  //   setData([...data, { ...newPerson, id: data.length + 1 }]);
-  // };
+  const addPerson = (newPerson) => {
+    setData([...data, { ...newPerson, id: data.length + 1 }]);
+  };
 
-  // const updatePerson = (id, updatedInfo) => {
-  //   setData(data.map(person => person.id === id ? { ...person, ...updatedInfo } : person));
-  // };
+  const updatePerson = (id, updatedInfo) => {
+    setData(data.map(person => person.id === id ? { ...person, ...updatedInfo } : person));
+  };
 
   // return (
   //   <div className="App">

@@ -37,7 +37,7 @@ function App() {
     <div className="App">
       <h1>User List</h1>
       <List data={data} deletePerson={deletePerson} updatePerson={updatePerson} />
-      <button className="newuserbtn"
+      <button className="button"
         onClick={() => addPerson({ first_name: "New", last_name: "User", email: "newuser@gmail.com", gender: "Male/Female/...", fee_balance: 2000 })}>
         New User
       </button>

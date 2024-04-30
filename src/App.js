@@ -3,6 +3,7 @@ import './App.css';
 import List from './Components/List';
 
 function App() {
+  //The initial data variables has picked the array of objects from the json file
   const initialData = [
     { id: 1, first_name: "Evelin", last_name: "Adenet", email: "eadenet0@thetimes.co.uk", gender: "Male", fee_balance: 4274 },
     { id: 2, first_name: "Cosme", last_name: "Vollam", email: "cvollam1@netvibes.com", gender: "Male", fee_balance: 2748 },
@@ -16,29 +17,29 @@ function App() {
     { id: 10, first_name: "Stephi", last_name: "Kember", email: "skember9@unc.edu", gender: "Female", fee_balance: 748 }
   ];
 
-  // const [data, setData] = useState(initialData);
+  const [data, setData] = useState(initialData);
 
-  // const deletePerson = (id) => {
-  //   setData(data.filter(person => person.id !== id));
-  // };
+  const deletePerson = (id) => {
+    setData(data.filter(person => person.id !== id));
+  };
 
-  // const addPerson = (newPerson) => {
-  //   setData([...data, { ...newPerson, id: data.length + 1 }]);
-  // };
+  const addPerson = (newPerson) => {
+    setData([...data, { ...newPerson, id: data.length + 1 }]);
+  };
 
-  // const updatePerson = (id, updatedInfo) => {
-  //   setData(data.map(person => person.id === id ? { ...person, ...updatedInfo } : person));
-  // };
+  const updatePerson = (id, updatedInfo) => {
+    setData(data.map(person => person.id === id ? { ...person, ...updatedInfo } : person));
+  };
 
-  // return (
-  //   <div className="App">
-  //     <h1>Users</h1>
-  //     <List data={data} deletePerson={deletePerson} updatePerson={updatePerson} />
-  //     <button onClick={() => addPerson({ first_name: "New", last_name: "User", email: "newuser@example.com", gender: "Non-binary", fee_balance: 500 })}>
-  //       Add New User
-  //     </button>
-  //   </div>
-  // );
+  return (
+    <div className="App">
+      <h1>User List</h1>
+      <List data={data} deletePerson={deletePerson} updatePerson={updatePerson} />
+      <button onClick={() => addPerson({ first_name: "New", last_name: "User", email: "newuser@gmail.com", gender: "Male/Female/...", fee_balance: 2000 })}>
+         New User
+      </button>
+    </div>
+  );
 }
 
 export default App;
